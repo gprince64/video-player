@@ -3,7 +3,7 @@ var videoPlayer;
 var playPauseBtn;
 var muteBtn
 var progressBar;
-
+var volumeBar;
 
 document.addEventListener("DOMContentLoaded", function(){initVideoPlayer(); }, false);
 
@@ -17,6 +17,8 @@ function initVideoPlayer(){
 
 	progressBar = document.getElementById('progress-bar');
 	progressBar.addEventListener('click', clickedBar, false);
+
+	volumeBar = document.getElementById('volume-bar');
 
 	videoPlayer.addEventListener('play', function(){
 		changeButton(playPauseBtn, 'pause');
@@ -63,14 +65,8 @@ function resetVideo(){
 	videoPlayer.pause();
 }
 
-function volumePlus(){
-	if(videoPlayer.volume < 1)
-		videoPlayer.volume += 0.1;
-}
-
-function volumeLess(){
-	if(videoPlayer.volume > 0)
-		videoPlayer.volume -= 0.1;
+function changeVolume(vol){
+	videoPlayer.volume = vol/100;
 }
 
 function toggleMute(){

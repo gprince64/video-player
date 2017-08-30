@@ -24,8 +24,7 @@
         <button id='replay-button' class='replay' title ='replay' onClick='replayVideo();'>replay</button>
         <button id='play-pause-button' class='play' title ='play' onClick='togglePlayPause();'>play</button>
         <button id='stop-button' class='stop' title='stop' onClick='resetVideo();'>stop</button>
-        <button id='volume-less-button' class='volume-less' title='volume less' onClick='volumeLess();'>vol -</button>
-        <button id='volume-plus-button' class='volume-plus' title='volume plus' onClick='volumePlus();'>vol +</button>
+        <input id="volume-bar" type="range" min="0" max="100" step="1" value='100' oninput="changeVolume(this.value)" onchange="changeVolume(this.value)"></input>
         <button id='mute-button' class='mute' title='mute' onClick='toggleMute();'>mute</button>
       </div>
     </div>

@@ -21,12 +21,12 @@
       </video>
       <div id ='video-player-controls'>
         <progress id='progress-bar' min='0' max='100' value='0'>0%</progress>
-        <button id='play-pause-button' class='play' title ='play' onClick='togglePlayPause();'>Play</button>
-        <button id='replay-button' class='replay' title ='replay' onClick='replayVideo();'>Replay</button>
-        <button id='stop-button' class='stop' title='stop' onClick='stopVideo();'>Stop</button>
-        <button id='volume-plus-button' class='volume-plus' title='volume plus' onClick='volumePlus();'>Vol +</button>
-        <button id='volume-less-button' class='volume-less' title='volume less' onClick='volumeLess();'>Vol -</button>
-        <button id='mute-button' class='mute' title='mute' onClick='toggleMute();'>Mute</button>
+        <button id='replay-button' class='replay' title ='replay' onClick='replayVideo();'>replay</button>
+        <button id='play-pause-button' class='play' title ='play' onClick='togglePlayPause();'>play</button>
+        <button id='stop-button' class='stop' title='stop' onClick='resetVideo();'>stop</button>
+        <button id='volume-plus-button' class='volume-plus' title='volume plus' onClick='volumePlus();'>vol +</button>
+        <button id='volume-less-button' class='volume-less' title='volume less' onClick='volumeLess();'>vol -</button>
+        <button id='mute-button' class='mute' title='mute' onClick='toggleMute();'>mute</button>
       </div>
     </div>
     <script src="scripts/video-manager.js" defer="defer"></script>

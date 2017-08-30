@@ -10,12 +10,20 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Website Title</title>
+    <title>Lecteur Vidéo Personnalisé</title>
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <h1>Welcome to HTML Boilerplate</h1>
-    <script src="scripts/main.js" defer="defer"></script>
+    <div id='video-player'>
+      <video id='video' controls>
+      <source src='https://s3-eu-west-1.amazonaws.com/onrewind-test-bucket/big_buck_bunny.mp4' type='video/mp4'>
+      </video>
+      <div id ='video-player-controls'>
+        <progress id='progress-bar' min='0' max='100' value='0'>0%</progress>
+        <button id='play-pause-button' class='play' title ='play' onClick='togglePlayPause();'>Play</button>
+      </div>
+    </div>
+    <script src="scripts/video-manager.js" defer="defer"></script>
   </body>
 </html>

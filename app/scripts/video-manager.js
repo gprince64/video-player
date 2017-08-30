@@ -74,6 +74,7 @@ function togglePlayPause(){
 		videoPlayer.pause();
 		hoverPlay.style.display = 'block'
 		hoverPause.style.display = 'none';
+		hoverDiv.style.visibility = 'visible';
 	}
 }
 

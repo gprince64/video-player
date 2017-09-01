@@ -105,10 +105,15 @@ function toggleMute(){
 	if(videoPlayer.muted){
 		changeButton(muteBtn,'mute');
 		videoPlayer.muted = false;
+		volumeBar.value=100;
+		changeVolume(100);
 	}
 	else{
 		changeButton(muteBtn,'unmute');
 		videoPlayer.muted=true;
+		volumeBar.value=0;
+		changeVolume(0);
+
 	}
 }
 

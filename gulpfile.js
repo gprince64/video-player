@@ -110,7 +110,7 @@ gulp.task('styles', () => {
   gulp.src('app/styles/' + masterSassFileName + '') // master SCSS file
     .pipe(plumber())
     .pipe(sass({
-      outputStyle: 'compressed',
+      outputStyle: 'expanded',
       errLogToConsole: true,
       includePaths: [
         'app/styles'

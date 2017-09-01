@@ -30,6 +30,15 @@ function initVideoPlayer(){
 	hoverPause = document.getElementById('hover-pause');
 	hoverPause.style.display='none';
 
+/*
+	videoPlayer.addEventListener('loadstart', function(){
+		videoPlayer.classList.add("loading");
+	}, false);
+
+	videoPlayer.addEventListener('canplay', function(){
+		videoPlayer.classList.remove("loading");
+	}, false);
+*/
 
 	videoPlayer.addEventListener('play', function(){
 		changeButton(playPauseBtn, 'pause');
@@ -129,4 +138,5 @@ function changeButton(btn, val){
 	btn.title = val;
 	btn.innerHTML = val;
 	btn.className = val;
+	btn.setAttribute('data-state', val)
 }

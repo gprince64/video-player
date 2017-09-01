@@ -15,25 +15,27 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <div id='video-player'>
+    <figure id="video-container">
       <div id='player' onmouseover="showHoverImg();" onmouseout="hideHoverImg();">
-      <div id ='video-hover'>
+        <div id ='video-hover'>
           <img id="hover-play" class="hover-img" src="../images/play-hover.png" onClick="togglePlayPause();">
           <img id="hover-pause" class="hover-img" src="../images/pause-hover.png" onClick="togglePlayPause();">
-      </div>
-        <video id='video' onClick="togglePlayPause();" controls>
+        </div>
+        <video id='video' onClick="togglePlayPause();">
         <source src='https://s3-eu-west-1.amazonaws.com/onrewind-test-bucket/big_buck_bunny.mp4' type='video/mp4'>
         </video>
       </div>
-      <div id ='video-player-controls'>
-        <progress id='progress-bar' min='0' max='100' value='0'>0%</progress>
+      <div id ='video-controls'>
         <button id='replay-button' class='replay' title ='replay' onClick='replayVideo();'>replay</button>
-        <button id='play-pause-button' class='play' title ='play' onClick='togglePlayPause();'>play</button>
+        <button id='play-pause-button' class='play' title ='play' data-state="play" onClick='togglePlayPause();'>play</button>
         <button id='stop-button' class='stop' title='stop' onClick='resetVideo();'>stop</button>
+        <div class="progress">
+                <progress id='progress-bar' min='0' max='100' value='0'>0%</progress>
+        </div>
         <input id="volume-bar" type="range" min="0" max="100" step="1" value='100' oninput="changeVolume(this.value)" onchange="changeVolume(this.value)"></input>
-        <button id='mute-button' class='mute' title='mute' onClick='toggleMute();'>mute</button>
+        <button id='mute-button' class='mute' title='mute' data-state="mute" onClick='toggleMute();'>mute</button>
       </div>
-    </div>
+    </figure>
     <script src="scripts/video-manager.js" defer="defer"></script>
   </body>
 </html>

@@ -64,7 +64,7 @@ function initVideoPlayer(){
 function replayVideo(){
 	videoPlayer.currentTime = 0;
 	progressBar.value = 0;
-	changeButton(playPauseBtn,'play');
+	changeButton(playPauseBtn,'pause');
 	videoPlayer.play();
 	hoverPause.style.display='block';
 	hoverPlay.style.display='none';

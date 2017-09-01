@@ -2,7 +2,7 @@
 
 const output = 'dist';
 const proxy = false; // Input your server path 'localhost/your-project/app'
-const scriptOutputName = 'main.js';
+const scriptOutputName = 'video-manager.js';
 const styleOutputName = 'styles.css';
 const masterSassFileName = 'styles.scss';
 const autoPrefixBrowserList = [
@@ -80,7 +80,7 @@ gulp.task('images-build', () => {
  */
 
 gulp.task('scripts', () => {
-  gulp.src(['app/scripts/vendors/**/*.js', 'app/scripts/src/*.js'])
+  gulp.src(['app/scripts/vendors/**/*.js', 'app/scripts/*.js'])
     .pipe(plumber())
     .pipe(babel({
       presets: ['es2015']
@@ -92,7 +92,7 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('scripts-build', () => {
-  gulp.src(['app/scripts/vendors/**/*.js', 'app/scripts/src/*.js'])
+  gulp.src(['app/scripts/vendors/**/*.js', 'app/scripts/*.js'])
     .pipe(plumber())
     .pipe(babel({
       presets: ['es2015']
@@ -107,13 +107,13 @@ gulp.task('scripts-build', () => {
  */
 
 gulp.task('styles', () => {
-  gulp.src('app/styles/scss/' + masterSassFileName + '') // master SCSS file
+  gulp.src('app/styles/' + masterSassFileName + '') // master SCSS file
     .pipe(plumber())
     .pipe(sass({
       outputStyle: 'compressed',
       errLogToConsole: true,
       includePaths: [
-        'app/styles/scss'
+        'app/styles'
       ]
     }).on('error', sass.logError))
     .pipe(autoprefixer({
@@ -127,12 +127,12 @@ gulp.task('styles', () => {
 });
 
 gulp.task('styles-build', () => {
-  gulp.src('app/styles/scss/' + masterSassFileName + '') // master SCSS file
+  gulp.src('app/styles/' + masterSassFileName + '') // master SCSS file
     .pipe(plumber())
     .pipe(sass({
       outputStyle: 'compressed',
       includePaths: [
-        'app/styles/scss',
+        'app/styles',
       ]
     }).on('error', sass.logError))
     .pipe(autoprefixer({
@@ -214,9 +214,9 @@ gulp.task('createFolder', () => {
  */
 
 gulp.task('default', ['browserSync', 'scripts', 'styles'], () => {
-  gulp.watch('app/scripts/src/**/*.js', ['scripts']);
+  gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/scripts/vendors/*.js', ['scripts']);
-  gulp.watch('app/styles/scss/**', ['styles']);
+  gulp.watch('app/styles/**', ['styles']);
   gulp.watch('app/**/*.html', ['html']);
   gulp.watch('app/**/*.php', ['php']);
 });

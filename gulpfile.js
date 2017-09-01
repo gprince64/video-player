@@ -4,7 +4,7 @@ const output = 'dist';
 const proxy = false; // Input your server path 'localhost/your-project/app'
 const scriptOutputName = 'video-manager.js';
 const styleOutputName = 'styles.css';
-const masterSassFileName = 'styles.scss';
+const masterSassFileName = 'styles.css';
 const autoPrefixBrowserList = [
   'last 2 version',
   'safari 5',

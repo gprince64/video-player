@@ -4,7 +4,8 @@
   "description": "HTML Video Player",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "test": "mocha"
   },
   "dependencies": {},
   "devDependencies": {

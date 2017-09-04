@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build",
-    "test": "mocha"
   },
   "dependencies": {},
   "devDependencies": {

@@ -13,6 +13,7 @@
     <title>Lecteur Vidéo Personnalisé</title>
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
   </head>
   <body>
     <figure id="video-container">
@@ -36,7 +37,20 @@
         <button id='mute-button' class='mute' title='mute' data-state="mute" onClick='toggleMute();'>mute</button>
       </div>
     </figure>
-    <!-- Source code -->
-    <script src="scripts/video-manager.js" defer="defer"></script>
+    <div id="mocha"></div>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script>mocha.setup('bdd')</script>
+
+    <!-- load code you want to test here -->
+    <script src="scripts/video-manager.js"></script>
+
+
+    <!-- load your test files here -->
+    <script src="../test/unitTests.js"></script>
+
+    <script>
+      mocha.run();
+    </script>
   </body>
 </html>

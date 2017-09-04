@@ -11,9 +11,16 @@ var hoverDiv;
 var hoverPlay;
 var hoverPause;
 
+/*
 document.addEventListener("DOMContentLoaded", function () {
 	initVideoPlayer();
 }, false);
+*/
+initVideoPlayer();
+
+function test() {
+	return 1;
+}
 
 function initVideoPlayer() {
 	videoPlayer = document.getElementById('video');

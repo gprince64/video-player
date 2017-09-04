@@ -11,16 +11,7 @@ var hoverDiv;
 var hoverPlay;
 var hoverPause;
 
-/*
-document.addEventListener("DOMContentLoaded", function () {
-	initVideoPlayer();
-}, false);
-*/
 initVideoPlayer();
-
-function test() {
-	return 1;
-}
 
 function initVideoPlayer() {
 	videoPlayer = document.getElementById('video');
@@ -61,7 +52,8 @@ function initVideoPlayer() {
 	}, false);
 
 	videoPlayer.addEventListener('volumechange', function () {
-		if (videoPlayer.muted) changeButton(muteBtn, 'unmute');else changeButton(muteBtn, 'mute');
+		if (videoPlayer.muted) changeButton(muteBtn, 'unmute');
+		else changeButton(muteBtn, 'mute');
 	}, false);
 
 	videoPlayer.addEventListener('timeupdate', updateProgressBar, false);

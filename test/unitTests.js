@@ -7,7 +7,7 @@ describe('Initialization', function() {
   });
 
   it('media is defined', function(){
-  	assert.equal(videoPlayer.networkState,1);
+  	assert.notEqual(videoPlayer.networkState,3);
   });
 });
 

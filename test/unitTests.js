@@ -95,6 +95,10 @@ describe('Video Style', function() {
 		resetVideo();
 	})
 
+	after(function(){
+		toggleMute();
+	})
+
 	it('Play button on screen is visible when video is paused',function(){
 		togglePlayPause();
 		togglePlayPause();
@@ -131,7 +135,7 @@ describe('Video Style', function() {
 	});
 
 	it('Unmute btn is visible when video is muted',function(){
-		toggleMute();	
+		toggleMute();
   		assert.equal(muteBtn.className,"unmute");
 	});
 

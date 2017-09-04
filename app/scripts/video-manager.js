@@ -54,6 +54,7 @@ function initVideoPlayer() {
 	videoPlayer.addEventListener('volumechange', function () {
 		if (videoPlayer.muted) changeButton(muteBtn, 'unmute');
 		else changeButton(muteBtn, 'mute');
+
 	}, false);
 
 	videoPlayer.addEventListener('timeupdate', updateProgressBar, false);
@@ -90,8 +91,6 @@ function togglePlayPause() {
 function resetVideo() {
 	videoPlayer.currentTime = 0;
 	progressBar.value = 0;
-	videoPlayer.muted = false;
-	videoPlayer.volume= 1;
 	changeButton(playPauseBtn, 'play');
 	videoPlayer.pause();
 	hoverPause.style.display = 'none';

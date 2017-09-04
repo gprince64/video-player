@@ -95,11 +95,13 @@ describe('Video Style', function() {
 		resetVideo();
 	})
 
+	// fixes the video being muted after last test
 	after(function(){
 		toggleMute();
 	})
 
 	it('Play button on screen is visible when video is paused',function(){
+		//play and pause the video
 		togglePlayPause();
 		togglePlayPause();
 	  		assert.isTrue((hoverDiv.style.visibility == "visible")&&(hoverPlay.style.display == "block"))
@@ -118,6 +120,7 @@ describe('Video Style', function() {
 	});
 
 	it('Play btn in controls is visible when video is paused',function(){
+  		//play and pause the video
   		togglePlayPause();
   		togglePlayPause();
   		assert.equal(playPauseBtn.className,"play");
@@ -129,6 +132,7 @@ describe('Video Style', function() {
 	});
 
 	it('Mute btn is visible when video is unmuted',function(){
+  		//mute and unmute the video
   		toggleMute();
   		toggleMute();
   		assert.equal(muteBtn.className,"mute");

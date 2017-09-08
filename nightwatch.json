@@ -1,0 +1,38 @@
+{
+  "src_folders" : ["test/endtoend/tests"],
+  "output_folder" : "test/endtoend/reports",
+  "globals_path" : "",
+  "test_workers": {
+    "enabled": true,
+    "workers": "auto"
+  },
+  "selenium" : {
+    "start_process" : true,
+    "server_path" : "node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-3.5.3.jar",
+    "log_path" : "test/endtoend/logs",
+    "host" : "127.0.0.1",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "node_modules/chromedriver/bin/chromedriver",
+      "webdriver.gecko.driver" : "node_modules/geckodriver/bin/geckodriver",
+      "webdriver.edge.driver" : ""
+    }
+  },
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "http://google.com",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "localhost",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
+    }
+  }
+}

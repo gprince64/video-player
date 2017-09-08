@@ -52,9 +52,7 @@ function initVideoPlayer() {
 	}, false);
 
 	videoPlayer.addEventListener('volumechange', function () {
-		if (videoPlayer.muted) changeButton(muteBtn, 'unmute');
-		else changeButton(muteBtn, 'mute');
-
+		if (videoPlayer.muted) changeButton(muteBtn, 'unmute');else changeButton(muteBtn, 'mute');
 	}, false);
 
 	videoPlayer.addEventListener('timeupdate', updateProgressBar, false);

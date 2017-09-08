@@ -14,8 +14,8 @@ video {
   height: 360px;
 }
 
-progress{
-  -webkit-appearance: progress-bar
+progress {
+  -webkit-appearance: progress-bar;
 }
 
 #player {

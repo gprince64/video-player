@@ -1,20 +1,20 @@
-15:24:15.257 INFO - Selenium build info: version: '3.5.3', revision: 'a88d25fe6b'
-15:24:15.257 INFO - Launching a standalone Selenium Server
-2017-09-08 15:24:15.273:INFO::main: Logging initialized @224ms to org.seleniumhq.jetty9.util.log.StdErrLog
-15:24:15.320 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-15:24:15.351 INFO - Driver provider class org.openqa.selenium.safari.SafariDriver registration is skipped:
+15:32:10.587 INFO - Selenium build info: version: '3.5.3', revision: 'a88d25fe6b'
+15:32:10.587 INFO - Launching a standalone Selenium Server
+2017-09-08 15:32:10.602:INFO::main: Logging initialized @225ms to org.seleniumhq.jetty9.util.log.StdErrLog
+15:32:10.649 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+15:32:10.680 INFO - Driver provider class org.openqa.selenium.safari.SafariDriver registration is skipped:
  registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN10
-15:24:15.367 INFO - Using the passthrough mode handler
-2017-09-08 15:24:15.398:INFO:osjs.Server:main: jetty-9.4.5.v20170502
-2017-09-08 15:24:15.413:WARN:osjs.SecurityHandler:main: ServletContext@o.s.j.s.ServletContextHandler@1907bac{/,null,STARTING} has uncovered http methods for path: /
-2017-09-08 15:24:15.413:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@1907bac{/,null,AVAILABLE}
-2017-09-08 15:24:15.507:INFO:osjs.AbstractConnector:main: Started ServerConnector@1f65459{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
-2017-09-08 15:24:15.507:INFO:osjs.Server:main: Started @456ms
-15:24:15.507 INFO - Selenium Server is up and running
-2017-09-08 15:24:16.132:INFO:osjshC.ROOT:qtp25330446-9: org.openqa.selenium.remote.server.WebDriverServlet-c4039c: Initialising WebDriverServlet
-15:24:16.163 INFO - Binding default provider to: org.openqa.selenium.chrome.ChromeDriverService
-15:24:16.163 INFO - Found handler: org.openqa.selenium.remote.server.BeginSession@65c4cb
-15:24:16.163 INFO - /session: Executing POST on /session (handler: BeginSession)
-15:24:16.210 INFO - Capabilities are: Capabilities {acceptSslCerts=true, name=Research On Google Test, browserName=firefox, javascriptEnabled=true, platformName=ANY, platform=ANY, }
-15:24:16.210 INFO - Capabilities {acceptSslCerts=true, name=Research On Google Test, browserName=firefox, javascriptEnabled=true, platformName=ANY, platform=ANY, } matched class org.openqa.selenium.remote.server.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
-15:24:16.210 INFO - Capabilities {acceptSslCerts=true, name=Research On Google Test, browserName=firefox, javascriptEnabled=true, platformName=ANY, platform=ANY, } matched class org.openqa.selenium.remote.server.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+15:32:10.696 INFO - Using the passthrough mode handler
+2017-09-08 15:32:10.727:INFO:osjs.Server:main: jetty-9.4.5.v20170502
+2017-09-08 15:32:10.743:WARN:osjs.SecurityHandler:main: ServletContext@o.s.j.s.ServletContextHandler@1907bac{/,null,STARTING} has uncovered http methods for path: /
+2017-09-08 15:32:10.743:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@1907bac{/,null,AVAILABLE}
+2017-09-08 15:32:10.837:INFO:osjs.AbstractConnector:main: Started ServerConnector@1f65459{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
+2017-09-08 15:32:10.837:INFO:osjs.Server:main: Started @459ms
+15:32:10.837 INFO - Selenium Server is up and running
+2017-09-08 15:32:11.446:INFO:osjshC.ROOT:qtp25330446-9: org.openqa.selenium.remote.server.WebDriverServlet-c4039c: Initialising WebDriverServlet
+15:32:11.477 INFO - Binding default provider to: org.openqa.selenium.chrome.ChromeDriverService
+15:32:11.477 INFO - Found handler: org.openqa.selenium.remote.server.BeginSession@65c4cb
+15:32:11.477 INFO - /session: Executing POST on /session (handler: BeginSession)
+15:32:11.524 INFO - Capabilities are: Capabilities {acceptSslCerts=true, name=Research On Google Test, browserName=firefox, javascriptEnabled=true, platformName=ANY, platform=ANY, }
+15:32:11.524 INFO - Capabilities {acceptSslCerts=true, name=Research On Google Test, browserName=firefox, javascriptEnabled=true, platformName=ANY, platform=ANY, } matched class org.openqa.selenium.remote.server.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
+15:32:11.524 INFO - Capabilities {acceptSslCerts=true, name=Research On Google Test, browserName=firefox, javascriptEnabled=true, platformName=ANY, platform=ANY, } matched class org.openqa.selenium.remote.server.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)

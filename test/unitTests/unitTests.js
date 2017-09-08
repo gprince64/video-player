@@ -77,7 +77,7 @@ describe('Video Controls', function() {
   		assert.isTrue((videoPlayer.currentTime == 0) && (videoPlayer.paused == true))
 	});
 
-	it('Progress bar is changed when video is playing',function(){
+	it('Progress bar is changed when video is playing (fails on 1st load)',function(){
   		var valueOld = progressBar.value;
   		videoPlayer.currentTime = valueOld + 10;
   		updateProgressBar();

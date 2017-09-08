@@ -21,7 +21,7 @@ function initVideoPlayer() {
 	videoPlayer.controls = false;
 
 	//Registering events (Most events are synced in HTML File (onClick))
-		//Change play/pause button states when using native play event (right click on media)
+	//Change play/pause button states when using native play event (right click on media)
 	videoPlayer.addEventListener('play', function () {
 		changeButton(playPauseBtn, 'pause');
 	}, false);
@@ -29,19 +29,19 @@ function initVideoPlayer() {
 		changeButton(playPauseBtn, 'play');
 	}, false);
 
-		// Changes mute/unmute buttons when videoPlayer is muted
+	// Changes mute/unmute buttons when videoPlayer is muted
 	videoPlayer.addEventListener('volumechange', function () {
 		if (videoPlayer.muted) changeButton(muteBtn, 'unmute');else changeButton(muteBtn, 'mute');
 	}, false);
 
-		// Update progress bar when time is running
+	// Update progress bar when time is running
 	videoPlayer.addEventListener('timeupdate', updateProgressBar, false);
 
-		// Reset the play when video is ended
+	// Reset the play when video is ended
 	videoPlayer.addEventListener('ended', resetVideo, false);
 
 	/*
-		// Test : add a .gif loading image when media is loading -> not working
+ 	// Test : add a .gif loading image when media is loading -> not working
  	videoPlayer.addEventListener('loadstart', function(){
  		videoPlayer.classList.add("loading");
  	}, false);
@@ -51,7 +51,7 @@ function initVideoPlayer() {
  	}, false);
  */
 
- // Register all elements
+	// Register all elements
 	playPauseBtn = document.getElementById('play-pause-button');
 	muteBtn = document.getElementById('mute-button');
 	progressBar = document.getElementById('progress-bar');
@@ -62,9 +62,8 @@ function initVideoPlayer() {
 	//Hide pause button, media is not playing on init
 	hoverPause.style.display = 'none';
 
-// Register click event on progress bar, load video from where user clicked
+	// Register click event on progress bar, load video from where user clicked
 	progressBar.addEventListener('click', clickedBar, false);
-
 }
 
 // Replays the video from 0 on btn click

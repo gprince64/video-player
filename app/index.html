@@ -37,16 +37,14 @@
         <button id='mute-button' class='mute' title='mute' data-state="mute" onClick='toggleMute();'>mute</button>
       </div>
     </figure>
+    <!-- Mocha Setup -->
     <div id="mocha"></div>
     <script src="../node_modules/mocha/mocha.js"></script>
     <script src="../node_modules/chai/chai.js"></script>
     <script>mocha.setup('bdd')</script>
-
-    <!-- load code you want to test here -->
+    <!-- Source code to test -->
     <script src="scripts/video-manager.js"></script>
-
-
-    <!-- load your test files here -->
+    <!-- Test files -->
     <script src="../test/unitTests/unitTests.js"></script>
 
     <script>
